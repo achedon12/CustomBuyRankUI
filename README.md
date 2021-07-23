@@ -1,2 +1,69 @@
 # CustomBuyRankUI
-pocketmine plugin in development
+pocketmine plugin CustomBuyRankUI
+
+## Available commands
+
+/buyrank
+
+/adminrank 
+       permission: use.adminrank
+
+## Base configuration
+
+    #   _____          _                  ____              _____             _    _    _ _____
+    #  / ____|        | |                |  _ \            |  __ \           | |  | |  | |_   _|
+    # | |    _   _ ___| |_ ___  _ __ ___ | |_) |_   _ _   _| |__) |__ _ _ __ | | _| |  | | | |
+    # | |   | | | / __| __/ _ \| '_ ` _ \|  _ <| | | | | | |  _  // _` | '_ \| |/ / |  | | | |
+    # | |___| |_| \__ \ || (_) | | | | | | |_) | |_| | |_| | | \ \ (_| | | | |   <| |__| |_| |_
+    #  \_____\__,_|___/\__\___/|_|_|_| |_|____/ \__,_|\__, |_|__\_\__,_|_| |_|_|\_\\____/|_____|
+    # |  _ \            /\       | |            | |    __/ | /_ |__ \
+    # | |_) |_   _     /  \   ___| |__   ___  __| | __|___/__ | |  ) |
+    # |  _ <| | | |   / /\ \ / __| '_ \ / _ \/ _` |/ _ \| '_ \| | / /
+    # | |_) | |_| |  / ____ \ (__| | | |  __/ (_| | (_) | | | | |/ /_
+    # |____/ \__, | /_/    \_\___|_| |_|\___|\__,_|\___/|_| |_|_|____|
+    #         __/ |
+    #        |___/
+
+
+    # please do not touch of "version"
+    version: v1
+
+    #This plugin allows you to put grades on sale and buyrankUI them with in-game currency
+
+    # Give the difference of money missing for the purchase of a grade
+    # Put <true | fasle>
+    DifferencePriceBuy: true
+
+    # Plugin configuration
+
+    # If your grade number is lower than the basic configuration, please put "none" in "price" and in the corresponding number
+
+    # If you want to add more rank, you juste have to do same configuration
+
+    # /!\ You will put the ranks from the most important to the least important /!\
+
+    NumberRank: 7
+    Rank:
+      0:
+        price: 2000
+        name: 'test1'
+      1:
+        price: 1000
+        name: 'test2'
+      2:
+        price: 500
+        name: 'test3'
+      3:
+        price: 400
+        name: 'test4'
+      4:
+        price: 300
+        name: 'test5'
+      5:
+        price: 200
+        name: 'test6'
+      6:
+        price: 100
+        name: 'test7'
+
+
