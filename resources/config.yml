@@ -16,45 +16,41 @@
 # please do not touch of "version"
 version: v1
 
-#This plugin allows you to put grades on sale and buy them with in-game currency
+#This plugin allows you to put grades on sale and buyrankUI them with in-game currency
 
-# Allow players to buy ranks lower than their own
-# Put true | false
-RankLowers: false
-
-# Allow players to buy a rank with a discount if they already have a certain rank
-# Put true | fasle
-PriceReduction: true
-
-# The price reduction must be a numerical value ( exemple: 10 )
-# The value is then converted to %
-ValuePriceReduction: 10
+# Give the difference of money missing for the purchase of a grade
+# Put <true | fasle>
+DifferencePriceBuy: true
 
 # Plugin configuration
 
 # If your grade number is lower than the basic configuration, please put "none" in "price" and in the corresponding number
 
 # If you want to add more rank, you juste have to do same configuration
+
+# /!\ You will put the ranks from the most important to the least important /!\
+
 NumberRank: 7
 Rank:
   0:
-    price: 1000
+    price: 2000
     name: 'test1'
   1:
     price: 1000
     name: 'test2'
   2:
-    price: 1000
+    price: 500
     name: 'test3'
   3:
-    price: 1000
+    price: 400
     name: 'test4'
   4:
-    price: 1000
+    price: 300
     name: 'test5'
   5:
-    price: 1000
+    price: 200
     name: 'test6'
   6:
-    price: 1000
+    price: 100
     name: 'test7'
+

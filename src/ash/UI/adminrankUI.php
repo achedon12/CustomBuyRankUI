@@ -9,7 +9,7 @@ use onebone\economyapi\EconomyAPI;
 use pocketmine\Player;
 use pocketmine\Server;
 
-class admin extends SimpleForm{
+class adminrankUI extends SimpleForm{
 
     public static function open(Player $player){
 

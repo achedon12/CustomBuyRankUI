@@ -6,7 +6,7 @@ use onebone\economyapi\EconomyAPI;
 use pocketmine\Player;
 use pocketmine\Server;
 
-class buy extends SimpleForm{
+class buyrankUI extends SimpleForm{
 
     public static function open(Player $player){
 
@@ -22,16 +22,28 @@ class buy extends SimpleForm{
                 }
 
                 $price = $db->getNested("Rank.".$data.'.price');
-                $RankName= $db->getNested("Rank.".$data.'.name');
+                $RankName = $db->getNested("Rank.".$data.'.name');
                 $money = EconomyAPI::getInstance()->myMoney($player);
                 $rank = Server::getInstance()->getPluginManager()->getPlugin("PurePerms")->getUserDataMgr()->getGroup($player);
-                if($money < $price){
-                    $player->sendMessage("You don't have enough money");
-                    return true;
+
+
+                $difference = $db->get("DifferencePriceBuy");
+                if($difference === "true"){
+                    if($money < $price){
+                        $differenceprice = $price - $money;
+                        $player->sendMessage("You don't have enough money\nYou miss ".$differenceprice." $");
+                        return true;
+                    }
+                }elseif($difference === "false"){
+                    if($money < $price){
+                        $player->sendMessage("You don't have enough money");
+                        return true;
+                    }
                 }
+
                 if($rank != $RankName){
                     EconomyAPI::getInstance()->reduceMoney($player,$price);
-                    $player->sendMessage("You did buy the rank: ".$RankName);
+                    $player->sendMessage("You did buyrankUI the rank: ".$RankName);
                     Server::getInstance()->getPluginManager()->getPlugin("PurePerms")->setGroup($player,$RankName);
                     return true;
                 }else{
@@ -42,7 +54,7 @@ class buy extends SimpleForm{
         );
 
         $form->setTitle("BuyRankUI");
-        $form->setContent("You can buy any grade you like");
+        $form->setContent("You can buyrankUI any grade you like");
         for($i = 0;$i < $db->get('NumberRank'); $i++){
             $form->addButton($db->getNested('Rank.'.$i.'.name'));
         }

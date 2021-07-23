@@ -3,7 +3,7 @@
 namespace ash\Commands;
 
 use ash\main;
-use ash\UI\admin;
+use ash\UI\adminrankUI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
@@ -24,11 +24,11 @@ class adminrank extends Command{
                 }else{
                     if($args[0] instanceof Player){
                         if(!$args[0]->isConnected()){
-                            $sender->sendMessage("This player does not exist or is not online");
+                            $sender->sendMessage("This player is not online");
                         }else{
                             $db = main::config();
                             $db->set("AdminRank",$args[0]);
-                            admin::open($sender);
+                            adminrankUI::open($sender);
                         }
                     }else{
                         $sender->sendMessage("/adminrank <player>");

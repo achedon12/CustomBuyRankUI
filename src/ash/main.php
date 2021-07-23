@@ -26,7 +26,7 @@ class main extends PluginBase implements Listener
 
         $this->getServer()->getCommandMap()->registerAll('Command', [
             new adminrank("adminrank", "player information", "/adminrank <player>"),
-            new buyrank("buyrank", "buy a rank", "/buyrank"),
+            new buyrank("buyrank", "buyrankUI a rank", "/buyrank"),
             new setnbrank("setnbrank", "put a number of purchasable ranks", "/setnbrank")
         ]);
 

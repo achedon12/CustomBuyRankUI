@@ -2,7 +2,7 @@
 
 namespace ash\Commands;
 
-use ash\UI\buy;
+use ash\UI\buyrankUI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
@@ -17,7 +17,16 @@ class buyrank extends Command{
     public function execute(CommandSender $sender, string $commandLabel, array $args)
     {
         if($sender instanceof Player){
-            buy::open($sender);
+            buyrankUI::open($sender);
+            if(count($args) != 1){
+                $sender->sendMessage("Available commands:\n/buyrank\n/buyrank info");
+            }else{
+                if($args[0] != "info"){
+                    $sender->sendMessage("Available commands:\n/buyrank\n/buyrank info");
+                }else{
+                    $sender->sendMessage("§6-- ----[§3CustomBuyRankUI§6]---- --§f\n\n\nPlugin made by §dAchedon12§f\n\nAvailable commands:\n/buyrank\n/buyrank info\n\ndiscord : achedon12#0034\nJoin my discord server : Ragnarok\n§6-- --- ---- ---- --- --");
+                }
+            }
         }else{
             $sender->sendMessage("Command to execute in game");
         }
