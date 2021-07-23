@@ -1,0 +1,5 @@
+name: CustomBuyRankUI
+version: 1
+api: [3.0.0]
+main: ash\main
+author: Achedon12

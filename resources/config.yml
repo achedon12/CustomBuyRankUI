@@ -1,0 +1,60 @@
+#   _____          _                  ____              _____             _    _    _ _____
+#  / ____|        | |                |  _ \            |  __ \           | |  | |  | |_   _|
+# | |    _   _ ___| |_ ___  _ __ ___ | |_) |_   _ _   _| |__) |__ _ _ __ | | _| |  | | | |
+# | |   | | | / __| __/ _ \| '_ ` _ \|  _ <| | | | | | |  _  // _` | '_ \| |/ / |  | | | |
+# | |___| |_| \__ \ || (_) | | | | | | |_) | |_| | |_| | | \ \ (_| | | | |   <| |__| |_| |_
+#  \_____\__,_|___/\__\___/|_|_|_| |_|____/ \__,_|\__, |_|__\_\__,_|_| |_|_|\_\\____/|_____|
+# |  _ \            /\       | |            | |    __/ | /_ |__ \
+# | |_) |_   _     /  \   ___| |__   ___  __| | __|___/__ | |  ) |
+# |  _ <| | | |   / /\ \ / __| '_ \ / _ \/ _` |/ _ \| '_ \| | / /
+# | |_) | |_| |  / ____ \ (__| | | |  __/ (_| | (_) | | | | |/ /_
+# |____/ \__, | /_/    \_\___|_| |_|\___|\__,_|\___/|_| |_|_|____|
+#         __/ |
+#        |___/
+
+
+# please do not touch of "version"
+version: v1
+
+#This plugin allows you to put grades on sale and buy them with in-game currency
+
+# Allow players to buy ranks lower than their own
+# Put true | false
+RankLowers: false
+
+# Allow players to buy a rank with a discount if they already have a certain rank
+# Put true | fasle
+PriceReduction: true
+
+# The price reduction must be a numerical value ( exemple: 10 )
+# The value is then converted to %
+ValuePriceReduction: 10
+
+# Plugin configuration
+
+# If your grade number is lower than the basic configuration, please put "none" in "price" and in the corresponding number
+
+# If you want to add more rank, you juste have to do same configuration
+NumberRank: 7
+Rank:
+  0:
+    price: 1000
+    name: 'test1'
+  1:
+    price: 1000
+    name: 'test2'
+  2:
+    price: 1000
+    name: 'test3'
+  3:
+    price: 1000
+    name: 'test4'
+  4:
+    price: 1000
+    name: 'test5'
+  5:
+    price: 1000
+    name: 'test6'
+  6:
+    price: 1000
+    name: 'test7'
