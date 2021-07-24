@@ -1,5 +1,4 @@
 # About
-pocketmine plugin CustomBuyRankUI
 
 ![CustomBuyRankUI](icon.png)
 
