@@ -1,6 +1,8 @@
 # CustomBuyRankUI
 pocketmine plugin CustomBuyRankUI
 
+(https://cdn.discordapp.com/attachments/789958386602475550/868373316002529350/IMG_20210724_074755.jpg)
+
 [FR] Vous permet d'ajouter des prix en fonction de grades en jeu
 
 [ENG] Allow you to add a price to buy a rank in game
@@ -9,7 +11,7 @@ pocketmine plugin CustomBuyRankUI
 
 ## Permissions commands
 
-permission: use.adminrank
+    use.adminrank
 
 -----------------
 
@@ -51,25 +53,25 @@ permission: use.adminrank
     Rank:
       0:
         price: 2000
-        name: 'test1'
+        name: 'name1'
       1:
         price: 1000
-        name: 'test2'
+        name: 'name2'
       2:
         price: 500
-        name: 'test3'
+        name: 'name3'
       3:
         price: 400
-        name: 'test4'
+        name: 'name4'
       4:
         price: 300
-        name: 'test5'
+        name: 'name5'
       5:
         price: 200
-        name: 'test6'
+        name: 'name6'
       6:
         price: 100
-        name: 'test7'
+        name: 'name7'
 
 -----------------
 
@@ -84,6 +86,7 @@ permission: use.adminrank
 ## Contact
 
 discord: achedon12#0034
+
 [my minecraft server](https://discord.gg/gmEyCzUJg2)
 
 [my github](https://github.com/leoderoin)

@@ -34,23 +34,23 @@ NumberRank: 7
 Rank:
   0:
     price: 2000
-    name: 'test1'
+    name: 'name1'
   1:
     price: 1000
-    name: 'test2'
+    name: 'name2'
   2:
     price: 500
-    name: 'test3'
+    name: 'name3'
   3:
     price: 400
-    name: 'test4'
+    name: 'name4'
   4:
     price: 300
-    name: 'test5'
+    name: 'name5'
   5:
     price: 200
-    name: 'test6'
+    name: 'name6'
   6:
     price: 100
-    name: 'test7'
+    name: 'name7'
 

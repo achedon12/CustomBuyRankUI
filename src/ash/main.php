@@ -31,6 +31,11 @@ class main extends PluginBase implements Listener
         ]);
 
         $this->db = new Config($this->getDataFolder() . "config.yml" . Config::YAML);
+
+        if(!$this->$this->getServer()->getPluginManager()->getPlugin("FormAPI") or !$this->$this->getServer()->getPluginManager()->getPlugin("PurePerms") or !$this->$this->getServer()->getPluginManager()->getPlugin("EconomyAPI")){
+            $this->getLogger()->alert("You don't <FormAPI|PurePems|EconomyAPI> on your server\nPlease instal them");
+            $this->getServer()->getPluginManager()->disablePlugins();
+        }
     }
 
     public static function config()
