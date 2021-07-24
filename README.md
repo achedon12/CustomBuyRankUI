@@ -1,7 +1,7 @@
-# CustomBuyRankUI
+# About
 pocketmine plugin CustomBuyRankUI
 
-(https://cdn.discordapp.com/attachments/789958386602475550/868373316002529350/IMG_20210724_074755.jpg)
+![CustomBuyRankUI](icon.png)
 
 [FR] Vous permet d'ajouter des prix en fonction de grades en jeu
 
@@ -9,7 +9,7 @@ pocketmine plugin CustomBuyRankUI
 
 -----------------
 
-## Permissions commands
+## Permissions
 
     use.adminrank
 
