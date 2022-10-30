@@ -1,28 +1,29 @@
 <?php
 
-namespace ash;
+namespace customBuyRank\achedon;
 
-use ash\Commands\adminrank;
-use ash\Commands\buyrank;
-use ash\Commands\setnbrank;
+use customBuyRank\achedon\commands\adminrank;
+use customBuyRank\achedon\commands\buyrank;
+use customBuyRank\achedon\commands\setnbrank;
 use pocketmine\event\Listener;
+use pocketmine\permission\Permission;
+use pocketmine\permission\PermissionManager;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\utils\SingletonTrait;
 
 class main extends PluginBase implements Listener
 {
 
-    /**@var $db Config */
-    public $db;
-    /** @vr main $instance*/
-    private static $instance;
 
-    public function onEnable()
+    use SingletonTrait;
+
+    protected function onEnable(): void
     {
-        self::$instance = $this;
         @mkdir($this->getDataFolder());
         $this->saveResource("config.yml");
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+
+        PermissionManager::getInstance()->addPermission(new Permission("use.adminrank"));
 
         $this->getServer()->getCommandMap()->registerAll('Command', [
             new adminrank("adminrank", "player information", "/adminrank <player>"),
@@ -30,21 +31,21 @@ class main extends PluginBase implements Listener
             new setnbrank("setnbrank", "put a number of purchasable ranks", "/setnbrank")
         ]);
 
-        $this->db = new Config($this->getDataFolder() . "config.yml" . Config::YAML);
 
         if(!$this->$this->getServer()->getPluginManager()->getPlugin("FormAPI") or !$this->$this->getServer()->getPluginManager()->getPlugin("PurePerms") or !$this->$this->getServer()->getPluginManager()->getPlugin("EconomyAPI")){
-            $this->getLogger()->alert("You don't <FormAPI|PurePems|EconomyAPI> on your server\nPlease instal them");
+            $this->getLogger()->alert("You don't <FormAPI|PurePerms|EconomyAPI> on your server\nPlease install them");
             $this->getServer()->getPluginManager()->disablePlugins();
         }
     }
 
-    public static function config()
+    protected function onLoad(): void
     {
-        return new Config(self::$instance->getDataFolder() . "config.yml", Config::YAML);
+        self::setInstance($this);
     }
 
-    public static function getInstance()
+    public function config()
     {
-        return self::$instance;
+        return new Config($this->getDataFolder() . "config.yml", Config::YAML);
     }
+
 }

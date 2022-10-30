@@ -1,11 +1,11 @@
 <?php
 
-namespace ash\Commands;
+namespace customBuyRank\achedon\commands;
 
-use ash\UI\buyrankUI;
+use customBuyRank\achedon\ui\buyrankUI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class buyrank extends Command{
 
@@ -24,7 +24,7 @@ class buyrank extends Command{
                 if($args[0] != "info"){
                     $sender->sendMessage("Available commands:\n/buyrank\n/buyrank info");
                 }else{
-                    $sender->sendMessage("§6-- ----[§3CustomBuyRankUI§6]---- --§f\n\n\nPlugin made by §dAchedon12§f\n\nAvailable commands:\n/buyrank\n/buyrank info\n\ndiscord : achedon12#0034\nJoin my discord server : Ragnarok\n§6-- --- ---- ---- --- --");
+                    $sender->sendMessage("§6-- ----[§3CustomBuyRankUI§6]---- --§f\n\n\nPlugin made by §dAchedon12§f\n\nAvailable commands:\n/buyrank\n/buyrank info\n\ndiscord : achedon12#0034\n\n§6-- --- ---- ---- --- --");
                 }
             }
         }else{

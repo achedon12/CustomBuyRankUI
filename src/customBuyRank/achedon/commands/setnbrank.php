@@ -1,11 +1,12 @@
 <?php
 
-namespace ash\Commands;
+namespace customBuyRank\achedon\commands;
 
-use ash\main;
+
+use customBuyRank\achedon\Main;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class setnbrank extends Command{
 

@@ -1,7 +1,7 @@
 name: CustomBuyRankUI
-version: 1
+version: 1.0.0
 api: [3.0.0]
-main: ash\main
+main: customBuyRank\achedon\Main
 author: Achedon12
 discord: achedon12#0034
-github: https://github.com/leoderoin
+github: https://github.com/achedon12
